@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.openjfx.io' }
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17.0.1'
+    implementation 'org.openjfx:javafx-base:17.0.1'
+    implementation 'org.openjfx:javafx-graphics:17.0.1'
+    implementation 'org.openjfx:javafx-fxml:17.0.1'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+mainClassName = 'com.example.shop.gui.ShopGUI'
+
+javafx {
+    version = '17.0.1'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
